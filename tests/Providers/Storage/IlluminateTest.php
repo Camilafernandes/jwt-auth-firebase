@@ -3,19 +3,19 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean CamilaFernandes <CamilaFernandes148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Test\Providers\Storage;
+namespace CamilaFernandes\JWTAuth\Test\Providers\Storage;
 
 use Mockery;
-use Tymon\JWTAuth\Test\AbstractTestCase;
+use CamilaFernandes\JWTAuth\Test\AbstractTestCase;
 use Illuminate\Contracts\Cache\Repository;
-use Tymon\JWTAuth\Test\Stubs\TaggedStorage;
-use Tymon\JWTAuth\Providers\Storage\Illuminate as Storage;
+use CamilaFernandes\JWTAuth\Test\Stubs\TaggedStorage;
+use CamilaFernandes\JWTAuth\Providers\Storage\Illuminate as Storage;
 
 class IlluminateTest extends AbstractTestCase
 {
@@ -25,7 +25,7 @@ class IlluminateTest extends AbstractTestCase
     protected $cache;
 
     /**
-     * @var \Tymon\JWTAuth\Providers\Storage\Illuminate
+     * @var \CamilaFernandes\JWTAuth\Providers\Storage\Illuminate
      */
     protected $storage;
 
@@ -89,7 +89,7 @@ class IlluminateTest extends AbstractTestCase
     {
         $this->storage = new TaggedStorage($this->cache);
 
-        $this->cache->shouldReceive('tags')->with('tymon.jwt')->once()->andReturn(Mockery::self());
+        $this->cache->shouldReceive('tags')->with('CamilaFernandes.jwt')->once()->andReturn(Mockery::self());
     }
 
     /** @test */

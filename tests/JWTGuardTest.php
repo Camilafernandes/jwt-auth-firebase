@@ -3,27 +3,27 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean CamilaFernandes <CamilaFernandes148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Test;
+namespace CamilaFernandes\JWTAuth\Test;
 
 use Mockery;
-use Tymon\JWTAuth\JWT;
-use Tymon\JWTAuth\Factory;
-use Tymon\JWTAuth\Payload;
-use Tymon\JWTAuth\JWTGuard;
+use CamilaFernandes\JWTAuth\JWT;
+use CamilaFernandes\JWTAuth\Factory;
+use CamilaFernandes\JWTAuth\Payload;
+use CamilaFernandes\JWTAuth\JWTGuard;
 use Illuminate\Http\Request;
 use Illuminate\Auth\EloquentUserProvider;
-use Tymon\JWTAuth\Test\Stubs\LaravelUserStub;
+use CamilaFernandes\JWTAuth\Test\Stubs\LaravelUserStub;
 
 class JWTGuardTest extends AbstractTestCase
 {
     /**
-     * @var \Tymon\JWTAuth\JWT|\Mockery\MockInterface
+     * @var \CamilaFernandes\JWTAuth\JWT|\Mockery\MockInterface
      */
     protected $jwt;
 
@@ -33,7 +33,7 @@ class JWTGuardTest extends AbstractTestCase
     protected $provider;
 
     /**
-     * @var \Tymon\JWTAuth\JWTGuard|\Mockery\MockInterface
+     * @var \CamilaFernandes\JWTAuth\JWTGuard|\Mockery\MockInterface
      */
     protected $guard;
 
@@ -69,12 +69,12 @@ class JWTGuardTest extends AbstractTestCase
         $this->jwt->shouldReceive('check')->once()->with(true)->andReturn($payload);
         $this->jwt->shouldReceive('checkSubjectModel')
                   ->once()
-                  ->with('\Tymon\JWTAuth\Test\Stubs\LaravelUserStub')
+                  ->with('\CamilaFernandes\JWTAuth\Test\Stubs\LaravelUserStub')
                   ->andReturn(true);
 
         $this->provider->shouldReceive('getModel')
                        ->once()
-                       ->andReturn('\Tymon\JWTAuth\Test\Stubs\LaravelUserStub');
+                       ->andReturn('\CamilaFernandes\JWTAuth\Test\Stubs\LaravelUserStub');
         $this->provider->shouldReceive('retrieveById')
                        ->once()
                        ->with(1)
@@ -104,12 +104,12 @@ class JWTGuardTest extends AbstractTestCase
         $this->jwt->shouldReceive('check')->once()->with(true)->andReturn($payload);
         $this->jwt->shouldReceive('checkSubjectModel')
                   ->once()
-                  ->with('\Tymon\JWTAuth\Test\Stubs\LaravelUserStub')
+                  ->with('\CamilaFernandes\JWTAuth\Test\Stubs\LaravelUserStub')
                   ->andReturn(true);
 
         $this->provider->shouldReceive('getModel')
                        ->once()
-                       ->andReturn('\Tymon\JWTAuth\Test\Stubs\LaravelUserStub');
+                       ->andReturn('\CamilaFernandes\JWTAuth\Test\Stubs\LaravelUserStub');
         $this->provider->shouldReceive('retrieveById')
              ->once()
              ->with(1)
@@ -157,7 +157,7 @@ class JWTGuardTest extends AbstractTestCase
     /**
      * @test
      * @group laravel-5.2
-     * @expectedException \Tymon\JWTAuth\Exceptions\UserNotDefinedException
+     * @expectedException \CamilaFernandes\JWTAuth\Exceptions\UserNotDefinedException
      * @expectedExceptionMessage An error occurred
      */
     public function it_should_throw_an_exception_if_an_invalid_token_is_provided()
@@ -175,7 +175,7 @@ class JWTGuardTest extends AbstractTestCase
     /**
      * @test
      * @group laravel-5.2
-     * @expectedException \Tymon\JWTAuth\Exceptions\UserNotDefinedException
+     * @expectedException \CamilaFernandes\JWTAuth\Exceptions\UserNotDefinedException
      * @expectedExceptionMessage An error occurred
      */
     public function it_should_throw_an_exception_if_no_token_is_provided()
@@ -329,7 +329,7 @@ class JWTGuardTest extends AbstractTestCase
     /**
      * @test
      * @group laravel-5.2
-     * @expectedException \Tymon\JWTAuth\Exceptions\JWTException
+     * @expectedException \CamilaFernandes\JWTAuth\Exceptions\JWTException
      * @expectedExceptionMessage Token could not be parsed from the request.
      */
     public function it_should_throw_an_exception_if_there_is_no_token_present_when_required()

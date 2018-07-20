@@ -3,18 +3,18 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean CamilaFernandes <CamilaFernandes148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Providers;
+namespace CamilaFernandes\JWTAuth\Providers;
 
-use Tymon\JWTAuth\Http\Parser\AuthHeaders;
-use Tymon\JWTAuth\Http\Parser\InputSource;
-use Tymon\JWTAuth\Http\Parser\QueryString;
-use Tymon\JWTAuth\Http\Parser\LumenRouteParams;
+use CamilaFernandes\JWTAuth\Http\Parser\AuthHeaders;
+use CamilaFernandes\JWTAuth\Http\Parser\InputSource;
+use CamilaFernandes\JWTAuth\Http\Parser\QueryString;
+use CamilaFernandes\JWTAuth\Http\Parser\LumenRouteParams;
 
 class LumenServiceProvider extends AbstractServiceProvider
 {
@@ -32,7 +32,7 @@ class LumenServiceProvider extends AbstractServiceProvider
 
         $this->extendAuthGuard();
 
-        $this->app['tymon.jwt.parser']->setChain([
+        $this->app['CamilaFernandes.jwt.parser']->setChain([
             new AuthHeaders,
             new QueryString,
             new InputSource,

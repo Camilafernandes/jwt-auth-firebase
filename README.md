@@ -1,4 +1,4 @@
-Fork de https://github.com/tymondesigns/jwt-auth com alterações para funcionar com Firebase
+Fork de https://github.com/CamilaFernandesdesigns/jwt-auth com alterações para funcionar com Firebase
 
 
 ```bash
@@ -8,7 +8,7 @@ No arquivo config/app.php altere o array de providers incluido a linha:
 
 ```bash
 
-Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class
+CamilaFernandes\JWTAuth\Providers\JWTAuthServiceProvider::class
 
 ```
 
@@ -16,8 +16,8 @@ No mesmo arquivo no array de facades incluir:
 
 ```bash
 
-    'JWTAuth'   => Tymon\JWTAuthFacades\JWTAuth::class,
-    'JWTFactory' => Tymon\JWTAuthFacades\JWTFactory::class
+    'JWTAuth'   => CamilaFernandes\JWTAuthFacades\JWTAuth::class,
+    'JWTFactory' => CamilaFernandes\JWTAuthFacades\JWTFactory::class
 
 ```
 
@@ -26,12 +26,12 @@ Depois rodar os comando :
 
 ```bash
 
-php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\JWTAuthServiceProvider"
+php artisan vendor:publish --provider="CamilaFernandes\JWTAuth\Providers\JWTAuthServiceProvider"
 php artisan jwt:generate
 
 ```
 
-E seguir com as configurações normais do JWT-AUTH do Tymons.
+E seguir com as configurações normais do JWT-AUTH do CamilaFernandess.
 
 Depois de to instalado, necessário baixar o json de conexão e salvar na raiz do projeto.
 Alterar as variaveis de ambiente JSON_FIREBASE com o caminho do json e DATABASE_URI com a url do database.

@@ -3,19 +3,19 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean CamilaFernandes <CamilaFernandes148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Test\Providers\Auth;
+namespace CamilaFernandes\JWTAuth\Test\Providers\Auth;
 
 use Mockery;
 use Cartalyst\Sentinel\Sentinel;
-use Tymon\JWTAuth\Test\AbstractTestCase;
-use Tymon\JWTAuth\Test\Stubs\SentinelStub;
-use Tymon\JWTAuth\Providers\Auth\Sentinel as Auth;
+use CamilaFernandes\JWTAuth\Test\AbstractTestCase;
+use CamilaFernandes\JWTAuth\Test\Stubs\SentinelStub;
+use CamilaFernandes\JWTAuth\Providers\Auth\Sentinel as Auth;
 
 class SentinelTest extends AbstractTestCase
 {
@@ -25,7 +25,7 @@ class SentinelTest extends AbstractTestCase
     protected $sentinel;
 
     /**
-     * @var \Tymon\JWTAuth\Providers\Auth\Sentinel
+     * @var \CamilaFernandes\JWTAuth\Providers\Auth\Sentinel
      */
     protected $auth;
 

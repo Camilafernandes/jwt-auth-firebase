@@ -3,25 +3,25 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean CamilaFernandes <CamilaFernandes148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Test\Middleware;
+namespace CamilaFernandes\JWTAuth\Test\Middleware;
 
 use Mockery;
 use Illuminate\Http\Response;
-use Tymon\JWTAuth\Http\Parser\Parser;
-use Tymon\JWTAuth\Test\Stubs\UserStub;
-use Tymon\JWTAuth\Exceptions\TokenInvalidException;
-use Tymon\JWTAuth\Http\Middleware\AuthenticateAndRenew;
+use CamilaFernandes\JWTAuth\Http\Parser\Parser;
+use CamilaFernandes\JWTAuth\Test\Stubs\UserStub;
+use CamilaFernandes\JWTAuth\Exceptions\TokenInvalidException;
+use CamilaFernandes\JWTAuth\Http\Middleware\AuthenticateAndRenew;
 
 class AuthenticateAndRenewTest extends AbstractMiddlewareTest
 {
     /**
-     * @var \Tymon\JWTAuth\Http\Middleware\Authenticate|\Tymon\JWTAuth\Http\Middleware\AuthenticateAndRenew
+     * @var \CamilaFernandes\JWTAuth\Http\Middleware\Authenticate|\CamilaFernandes\JWTAuth\Http\Middleware\AuthenticateAndRenew
      */
     protected $middleware;
 

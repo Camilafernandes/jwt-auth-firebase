@@ -3,40 +3,40 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean CamilaFernandes <CamilaFernandes148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth;
+namespace CamilaFernandes\JWTAuth;
 
 use Countable;
 use ArrayAccess;
 use JsonSerializable;
 use BadMethodCallException;
 use Illuminate\Support\Arr;
-use Tymon\JWTAuth\Claims\Claim;
-use Tymon\JWTAuth\Claims\Collection;
+use CamilaFernandes\JWTAuth\Claims\Claim;
+use CamilaFernandes\JWTAuth\Claims\Collection;
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Contracts\Support\Arrayable;
-use Tymon\JWTAuth\Exceptions\PayloadException;
-use Tymon\JWTAuth\Validators\PayloadValidator;
+use CamilaFernandes\JWTAuth\Exceptions\PayloadException;
+use CamilaFernandes\JWTAuth\Validators\PayloadValidator;
 
 class Payload implements ArrayAccess, Arrayable, Countable, Jsonable, JsonSerializable
 {
     /**
      * The collection of claims.
      *
-     * @var \Tymon\JWTAuth\Claims\Collection
+     * @var \CamilaFernandes\JWTAuth\Claims\Collection
      */
     private $claims;
 
     /**
      * Build the Payload.
      *
-     * @param  \Tymon\JWTAuth\Claims\Collection  $claims
-     * @param  \Tymon\JWTAuth\Validators\PayloadValidator  $validator
+     * @param  \CamilaFernandes\JWTAuth\Claims\Collection  $claims
+     * @param  \CamilaFernandes\JWTAuth\Validators\PayloadValidator  $validator
      * @param  bool  $refreshFlow
      *
      * @return void
@@ -49,7 +49,7 @@ class Payload implements ArrayAccess, Arrayable, Countable, Jsonable, JsonSerial
     /**
      * Get the array of claim instances.
      *
-     * @return \Tymon\JWTAuth\Claims\Collection
+     * @return \CamilaFernandes\JWTAuth\Claims\Collection
      */
     public function getClaims()
     {
@@ -120,7 +120,7 @@ class Payload implements ArrayAccess, Arrayable, Countable, Jsonable, JsonSerial
      *
      * @param  string  $claim
      *
-     * @return \Tymon\JWTAuth\Claims\Claim
+     * @return \CamilaFernandes\JWTAuth\Claims\Claim
      */
     public function getInternal($claim)
     {
@@ -130,7 +130,7 @@ class Payload implements ArrayAccess, Arrayable, Countable, Jsonable, JsonSerial
     /**
      * Determine whether the payload has the claim (by instance).
      *
-     * @param  \Tymon\JWTAuth\Claims\Claim  $claim
+     * @param  \CamilaFernandes\JWTAuth\Claims\Claim  $claim
      *
      * @return bool
      */
@@ -223,7 +223,7 @@ class Payload implements ArrayAccess, Arrayable, Countable, Jsonable, JsonSerial
      * @param  mixed  $key
      * @param  mixed  $value
      *
-     * @throws \Tymon\JWTAuth\Exceptions\PayloadException
+     * @throws \CamilaFernandes\JWTAuth\Exceptions\PayloadException
      */
     public function offsetSet($key, $value)
     {
@@ -235,7 +235,7 @@ class Payload implements ArrayAccess, Arrayable, Countable, Jsonable, JsonSerial
      *
      * @param  string  $key
      *
-     * @throws \Tymon\JWTAuth\Exceptions\PayloadException
+     * @throws \CamilaFernandes\JWTAuth\Exceptions\PayloadException
      *
      * @return void
      */
@@ -280,7 +280,7 @@ class Payload implements ArrayAccess, Arrayable, Countable, Jsonable, JsonSerial
     {
         if (preg_match('/get(.+)\b/i', $method, $matches)) {
             foreach ($this->claims as $claim) {
-                if (get_class($claim) === 'Tymon\\JWTAuth\\Claims\\'.$matches[1]) {
+                if (get_class($claim) === 'CamilaFernandes\\JWTAuth\\Claims\\'.$matches[1]) {
                     return $claim->getValue();
                 }
             }

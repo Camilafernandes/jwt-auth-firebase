@@ -44,12 +44,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Tymon\\JWTAuth\\": "src/"
+            "CamilaFernandes\\JWTAuth\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tymon\\JWTAuth\\Test\\": "tests/"
+            "CamilaFernandes\\JWTAuth\\Test\\": "tests/"
         }
     },
     "extra": {
@@ -58,12 +58,12 @@
         },
         "laravel": {
             "aliases": {
-                "JWTAuth": "Tymon\\JWTAuth\\Facades\\JWTAuth",
-                "JWTFactory": "Tymon\\JWTAuth\\Facades\\JWTFactory"
+                "JWTAuth": "CamilaFernandes\\JWTAuth\\Facades\\JWTAuth",
+                "JWTFactory": "CamilaFernandes\\JWTAuth\\Facades\\JWTFactory"
             },
             "providers": [
-                "Tymon\\JWTAuth\\Providers\\LaravelServiceProvider",
-                "Tymon\\JWTAuth\\Providers\\FirebaseServiceProvider"
+                "CamilaFernandes\\JWTAuth\\Providers\\LaravelServiceProvider",
+                "CamilaFernandes\\JWTAuth\\Providers\\FirebaseServiceProvider"
             ]
         }
     },

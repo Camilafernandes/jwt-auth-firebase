@@ -3,13 +3,13 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean CamilaFernandes <CamilaFernandes148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Providers\JWT;
+namespace CamilaFernandes\JWTAuth\Providers\JWT;
 
 use Exception;
 use ReflectionClass;
@@ -19,8 +19,8 @@ use Lcobucci\JWT\Signer\Rsa;
 use Lcobucci\JWT\Signer\Ecdsa;
 use Lcobucci\JWT\Signer\Keychain;
 use Illuminate\Support\Collection;
-use Tymon\JWTAuth\Contracts\Providers\JWT;
-use Tymon\JWTAuth\Exceptions\JWTException;
+use CamilaFernandes\JWTAuth\Contracts\Providers\JWT;
+use CamilaFernandes\JWTAuth\Exceptions\JWTException;
 use Lcobucci\JWT\Signer\Rsa\Sha256 as RS256;
 use Lcobucci\JWT\Signer\Rsa\Sha384 as RS384;
 use Lcobucci\JWT\Signer\Rsa\Sha512 as RS512;
@@ -30,7 +30,7 @@ use Lcobucci\JWT\Signer\Hmac\Sha512 as HS512;
 use Lcobucci\JWT\Signer\Ecdsa\Sha256 as ES256;
 use Lcobucci\JWT\Signer\Ecdsa\Sha384 as ES384;
 use Lcobucci\JWT\Signer\Ecdsa\Sha512 as ES512;
-use Tymon\JWTAuth\Exceptions\TokenInvalidException;
+use CamilaFernandes\JWTAuth\Exceptions\TokenInvalidException;
 
 class Lcobucci extends Provider implements JWT
 {
@@ -95,7 +95,7 @@ class Lcobucci extends Provider implements JWT
      *
      * @param  array  $payload
      *
-     * @throws \Tymon\JWTAuth\Exceptions\JWTException
+     * @throws \CamilaFernandes\JWTAuth\Exceptions\JWTException
      *
      * @return string
      */
@@ -121,7 +121,7 @@ class Lcobucci extends Provider implements JWT
      *
      * @param  string  $token
      *
-     * @throws \Tymon\JWTAuth\Exceptions\JWTException
+     * @throws \CamilaFernandes\JWTAuth\Exceptions\JWTException
      *
      * @return array
      */
@@ -145,7 +145,7 @@ class Lcobucci extends Provider implements JWT
     /**
      * Get the signer instance.
      *
-     * @throws \Tymon\JWTAuth\Exceptions\JWTException
+     * @throws \CamilaFernandes\JWTAuth\Exceptions\JWTException
      *
      * @return \Lcobucci\JWT\Signer
      */

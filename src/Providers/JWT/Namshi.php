@@ -3,13 +3,13 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean CamilaFernandes <CamilaFernandes148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Providers\JWT;
+namespace CamilaFernandes\JWTAuth\Providers\JWT;
 
 use Exception;
 use Namshi\JOSE\JWS;
@@ -17,9 +17,9 @@ use ReflectionClass;
 use ReflectionException;
 use InvalidArgumentException;
 use Namshi\JOSE\Signer\OpenSSL\PublicKey;
-use Tymon\JWTAuth\Contracts\Providers\JWT;
-use Tymon\JWTAuth\Exceptions\JWTException;
-use Tymon\JWTAuth\Exceptions\TokenInvalidException;
+use CamilaFernandes\JWTAuth\Contracts\Providers\JWT;
+use CamilaFernandes\JWTAuth\Exceptions\JWTException;
+use CamilaFernandes\JWTAuth\Exceptions\TokenInvalidException;
 
 class Namshi extends Provider implements JWT
 {
@@ -52,7 +52,7 @@ class Namshi extends Provider implements JWT
      *
      * @param  array  $payload
      *
-     * @throws \Tymon\JWTAuth\Exceptions\JWTException
+     * @throws \CamilaFernandes\JWTAuth\Exceptions\JWTException
      *
      * @return string
      */
@@ -72,7 +72,7 @@ class Namshi extends Provider implements JWT
      *
      * @param  string  $token
      *
-     * @throws \Tymon\JWTAuth\Exceptions\JWTException
+     * @throws \CamilaFernandes\JWTAuth\Exceptions\JWTException
      *
      * @return array
      */
