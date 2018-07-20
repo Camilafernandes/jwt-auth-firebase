@@ -2,7 +2,7 @@ Fork de https://github.com/tymondesigns/jwt-auth com alterações para funcionar
 
 
 ```bash
-composer require Camilafernandes/jwt-auth-firebase
+composer require camilafernandes/jwt-auth-firebase
 ```
 No arquivo config/app.php altere o array de providers incluido a linha:
 
