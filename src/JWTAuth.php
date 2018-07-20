@@ -62,10 +62,12 @@ class JWTAuth extends JWT
     public function authenticate()
     {
 
+        if($this->config('firebase') == false){
         $id = $this->getPayload()->get('sub');
 
-        if (! $this->auth->byId($id)) {
-            return false;
+            if (! $this->auth->byId($id)) {
+                return false;
+            }
         }
 
         return $this->user();
@@ -74,7 +76,7 @@ class JWTAuth extends JWT
             $id = $this->getPayload($token)->get('sub');
 
             $firebase = FirebaseServiceProvider::register();
-            
+
             $database = $firebase->getDatabase();
             $user = $database->getReference('Users')
             ->orderByChild('key')
